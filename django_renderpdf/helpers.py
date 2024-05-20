@@ -122,18 +122,15 @@ def render_pdf(
     if isinstance(template, str):
         template = [template]
 
-    write_pdf_args = {
-        "target":file_,
-        "stylesheets":styles
-        }
+    write_pdf_args = {"target": file_, "stylesheets": styles}
 
-    write_pdf_args = {key:value for key,value in write_pdf_args.items() if value is not None}
-        
+    write_pdf_args = {
+        key: value for key, value in write_pdf_args.items() if value is not None
+    }
+
     html = select_template(template).render(context)
     HTML(
         string=html,
         base_url="not-used://",
         url_fetcher=url_fetcher,
-    ).write_pdf(
-        **write_pdf_args
-    )
+    ).write_pdf(**write_pdf_args)
