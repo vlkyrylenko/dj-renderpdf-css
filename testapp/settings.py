@@ -1,4 +1,6 @@
+import os
 from pathlib import Path
+from weasyprint import CSS
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -63,3 +65,10 @@ DATABASES = {
 
 STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR.joinpath("testapp/static/")
+
+
+TEMPLATE_CSS = [
+    CSS(os.path.join('config','invoice_template_001.css')),
+    CSS('https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css'),
+    CSS('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
+]

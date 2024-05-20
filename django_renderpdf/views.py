@@ -134,11 +134,6 @@ class PDFView(View, ContextMixin):
 
     def get_stylesheets(self) -> list:
         """Return a list of CSS stylesheets which will be used to render PDF."""
-        if self.stylesheets is None:
-            raise ImproperlyConfigured(
-                "PDFView with 'get_stylesheets' defined requires a definition "
-                "of 'stylesheets'."
-            )
         return self.stylesheets
 
     def render(self, request, styles: list, template, context) -> HttpResponse:
