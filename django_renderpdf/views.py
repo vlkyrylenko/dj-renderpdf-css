@@ -26,7 +26,7 @@ class PDFView(View, ContextMixin):
 
         The name of the template file that will be rendered into a PDF file. Template
         discovery works just like any regular Django view.
-    
+
     .. autoattribute:: stylesheets
 
         List of CSS stylesheets to be passed to the PDF renderer. May include static files or urls.
@@ -133,16 +133,10 @@ class PDFView(View, ContextMixin):
         return self.template_name
 
     def get_stylesheets(self) -> list:
-        """Return a list of CSS stylesheets which will be used to render PDF.
-        """
-        if self.stylesheets is None:
-            raise ImproperlyConfigured(
-                "PDFView with 'get_stylesheets' defined requires a definition "
-                "of 'stylesheets'."
-            )
+        """Return a list of CSS stylesheets which will be used to render PDF."""
         return self.stylesheets
 
-    def render(self, request, styles:list, template, context) -> HttpResponse:
+    def render(self, request, styles: list, template, context) -> HttpResponse:
         """Returns a response.
 
         By default, this will contain the rendered PDF, but if both ``allow_force_html``
