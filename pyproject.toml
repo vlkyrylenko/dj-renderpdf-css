@@ -2,7 +2,7 @@
 requires = ["setuptools>=45", "wheel", "setuptools_scm>=6.2"]
 
 [project]
-name = "django-renderpdf"
+name = "dj-renderpdf-css"
 authors = [
     {name = "Hugo Osvaldo Barrera", email = "hugo@whynothugo.nl"},
 ]
@@ -22,7 +22,7 @@ classifiers = [
     "License :: OSI Approved :: ISC License (ISCL)",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.8"dj-renderpdf-css,
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",

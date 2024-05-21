@@ -13,7 +13,7 @@ import django_renderpdf
 
 # -- Project information -----------------------------------------------------
 
-project = "django_renderpdf"
+project = "dj-renderpdf-css"
 copyright = "2023, Hugo Osvaldo Barrera"
 author = "Hugo Osvaldo Barrera"
 
@@ -57,7 +57,7 @@ html_theme = "alabaster"
 html_static_path = ["_static"]
 
 html_theme_options = {
-    "github_user": "WhyNotHugo",
+    "github_user": "vlkyrylenko",
     "github_repo": "django-renderpdf",
     "github_banner": "true",
 }
